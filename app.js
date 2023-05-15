@@ -16,4 +16,5 @@ app.get("/api/getLyrics/:id",async (req,resp ) =>{
     const data = await res.data;
     return resp.json(data)
 })
-app.listen(3000,() =>{console.log("running server")})
+const port = process.env.PORT || 3000;
+app.listen(port,() =>{console.log("running server")})
